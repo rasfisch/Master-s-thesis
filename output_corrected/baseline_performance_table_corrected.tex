@@ -1,0 +1,24 @@
+\begin{table}
+
+\caption{Baseline out-of-sample forecasting performance}
+\centering
+\begin{tabular}[t]{lllr}
+\toprule
+Model & $R^2_{OS}$ (\%) & Success ratio & MSPE ratio\\
+\midrule
+Historical average & - & 0.553 & 1.000\\
+Elastic Net & 13.902** & 0.610** & 0.861\\
+Lasso & 14.233** & 0.585* & 0.858\\
+Ridge & 9.172** & 0.610** & 0.908\\
+PC & 10.473** & 0.618*** & 0.895\\
+\addlinespace
+PLS & 7.807** & 0.537 & 0.922\\
+Mean & 3.083* & 0.577 & 0.969\\
+Median & 0.905 & 0.561 & 0.991\\
+Trimmed mean & 2.223* & 0.569 & 0.978\\
+DMSPE(1) & 3.479* & 0.577 & 0.965\\
+\addlinespace
+DMSPE(0.9) & 3.679* & 0.569 & 0.963\\
+\bottomrule
+\end{tabular}
+\end{table}
