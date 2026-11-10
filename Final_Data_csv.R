@@ -1,11 +1,13 @@
 library(tidyverse)
 library(lubridate)
 
-macro_predictors_zhang <- read_csv("/cloud/project/data/macro_predictors_zhang.csv") %>%
+macro_predictors_zhang <- read_csv(
+  file.path("data", "macro_predictors_zhang.csv")) %>%
   mutate(date = as.Date(date)) %>%
   arrange(date)
 
-technical_indicators <- read_csv("/cloud/project/data/technical_indicators_yahoo_full18.csv") %>%
+technical_indicators <- read_csv(
+  file.path("data", "technical_indicators_yahoo_full18.csv")) %>%
   mutate(date = as.Date(date)) %>%
   arrange(date)
 
@@ -52,5 +54,5 @@ ncol(forecast_data_full32)
 
 write_csv(
   forecast_data_full32,
-  "/cloud/project/data/forecast_data_full32_yahoo_volume_period.csv"
+  file.path("data", "forecast_data_full32_yahoo_volume_period.csv")
 )
